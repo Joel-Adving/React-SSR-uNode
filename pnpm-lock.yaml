@@ -11,6 +11,12 @@ importers:
       '@oki.gg/unode':
         specifier: ^1.4.5
         version: 1.4.5
+      '@tanstack/react-query':
+        specifier: ^5.49.2
+        version: 5.49.2(react@18.3.1)
+      jotai:
+        specifier: ^2.8.4
+        version: 2.8.4(@types/react@18.3.3)(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -20,15 +26,6 @@ importers:
       react-router-dom:
         specifier: ^6.24.0
         version: 6.24.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      redis:
-        specifier: ^4.6.14
-        version: 4.6.14
-      typescript:
-        specifier: ^5.5.2
-        version: 5.5.2
-      vite:
-        specifier: ^5.3.2
-        version: 5.3.2(@types/node@20.14.9)(terser@5.31.1)
     devDependencies:
       '@rollup/plugin-replace':
         specifier: ^5.0.7
@@ -45,15 +42,24 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.3.1
         version: 4.3.1(vite@5.3.2(@types/node@20.14.9)(terser@5.31.1))
+      nodemon:
+        specifier: ^3.1.4
+        version: 3.1.4
       tsc-alias:
         specifier: ^1.8.10
         version: 1.8.10
       tsconfig-paths:
         specifier: ^4.2.0
         version: 4.2.0
+      typescript:
+        specifier: ^5.5.2
+        version: 5.5.2
       typescript-transform-paths:
         specifier: ^3.4.7
         version: 3.4.7(typescript@5.5.2)
+      vite:
+        specifier: ^5.3.2
+        version: 5.3.2(@types/node@20.14.9)(terser@5.31.1)
       vite-plugin-html:
         specifier: ^3.2.2
         version: 3.2.2(vite@5.3.2(@types/node@20.14.9)(terser@5.31.1))
@@ -341,35 +347,6 @@ packages:
   '@oki.gg/unode@1.4.5':
     resolution: {integrity: sha512-XLhbsCKXw3iC6UlDkXCDSYkGYMC/fcDjUz4EZUdidAaEOCPiCjg932tH6k26BuLVdYZGFGJDbwLh+Lqdq4BDCA==}
 
-  '@redis/bloom@1.2.0':
-    resolution: {integrity: sha512-HG2DFjYKbpNmVXsa0keLHp/3leGJz1mjh09f2RLGGLQZzSHpkmZWuwJbAvo3QcRY8p80m5+ZdXZdYOSBLlp7Cg==}
-    peerDependencies:
-      '@redis/client': ^1.0.0
-
-  '@redis/client@1.5.16':
-    resolution: {integrity: sha512-X1a3xQ5kEMvTib5fBrHKh6Y+pXbeKXqziYuxOUo1ojQNECg4M5Etd1qqyhMap+lFUOAh8S7UYevgJHOm4A+NOg==}
-    engines: {node: '>=14'}
-
-  '@redis/graph@1.1.1':
-    resolution: {integrity: sha512-FEMTcTHZozZciLRl6GiiIB4zGm5z5F3F6a6FZCyrfxdKOhFlGkiAqlexWMBzCi4DcRoyiOsuLfW+cjlGWyExOw==}
-    peerDependencies:
-      '@redis/client': ^1.0.0
-
-  '@redis/json@1.0.6':
-    resolution: {integrity: sha512-rcZO3bfQbm2zPRpqo82XbW8zg4G/w4W3tI7X8Mqleq9goQjAGLL7q/1n1ZX4dXEAmORVZ4s1+uKLaUOg7LrUhw==}
-    peerDependencies:
-      '@redis/client': ^1.0.0
-
-  '@redis/search@1.1.6':
-    resolution: {integrity: sha512-mZXCxbTYKBQ3M2lZnEddwEAks0Kc7nauire8q20oA0oA/LoA+E/b5Y5KZn232ztPb1FkIGqo12vh3Lf+Vw5iTw==}
-    peerDependencies:
-      '@redis/client': ^1.0.0
-
-  '@redis/time-series@1.0.5':
-    resolution: {integrity: sha512-IFjIgTusQym2B5IZJG3XKr5llka7ey84fw/NOYqESP5WUfQs9zz1ww/9+qoz4ka/S6KcGBodzlCeZ5UImKbscg==}
-    peerDependencies:
-      '@redis/client': ^1.0.0
-
   '@remix-run/router@1.17.0':
     resolution: {integrity: sha512-2D6XaHEVvkCn682XBnipbJjgZUU7xjLtA4dGJRBVUKpEaDYOZMENZoZjAOSb7qirxt5RupjzZxz4fK2FO+EFPw==}
     engines: {node: '>=14.0.0'}
@@ -475,6 +452,14 @@ packages:
     resolution: {integrity: sha512-UOo5FdvOL0+eIVTgS4tIdbW+TtnBLWg1YBCcU2KWM7nuNwRz9bksDX1bekJJCpu25N1DVWaCwnT39dVQxzqS8g==}
     cpu: [x64]
     os: [win32]
+
+  '@tanstack/query-core@5.49.1':
+    resolution: {integrity: sha512-JnC9ndmD1KKS01Rt/ovRUB1tmwO7zkyXAyIxN9mznuJrcNtOrkmOnQqdJF2ib9oHzc2VxHomnEG7xyfo54Npkw==}
+
+  '@tanstack/react-query@5.49.2':
+    resolution: {integrity: sha512-6rfwXDK9BvmHISbNFuGd+wY3P44lyW7lWiA9vIFGT/T0P9aHD1VkjTvcM4SDAIbAQ9ygEZZoLt7dlU1o3NjMVA==}
+    peerDependencies:
+      react: ^18.0.0
 
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -582,10 +567,6 @@ packages:
   clean-css@5.3.3:
     resolution: {integrity: sha512-D5J+kHaVb/wKSFcyyV75uCn8fiY4sV38XJoe4CUyGQ+mOU/fMVYUdH1hJC+CJQ5uY3EnW27SbJYS4X8BiLrAFg==}
     engines: {node: '>= 10.0'}
-
-  cluster-key-slot@1.1.2:
-    resolution: {integrity: sha512-RMr0FhtfXemyinomL4hrWcYJxmX6deFdCxpJzhDttxgO1+bcCnkk+9drydLVDmAMG7NE6aN/fl4F7ucU/90gAA==}
-    engines: {node: '>=0.10.0'}
 
   color-convert@1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
@@ -724,10 +705,6 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  generic-pool@3.9.0:
-    resolution: {integrity: sha512-hymDOu5B53XvN4QT9dBmZxPX4CWhBPPLguTZ9MMFeFa/Kg0xWVfylOVNlJji/E7yTZWFd/q9GO5TxDLq156D7g==}
-    engines: {node: '>= 4'}
-
   gensync@1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
     engines: {node: '>=6.9.0'}
@@ -764,6 +741,9 @@ packages:
     engines: {node: '>=12'}
     hasBin: true
 
+  ignore-by-default@1.0.1:
+    resolution: {integrity: sha512-Ius2VYcGNk7T90CppJqcIkS5ooHUZyIQK+ClZfMfMNFEF9VSE73Fq+906u/CWu92x4gzZMWOwfFYckPObzdEbA==}
+
   ignore@5.3.1:
     resolution: {integrity: sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==}
     engines: {node: '>= 4'}
@@ -788,6 +768,18 @@ packages:
     resolution: {integrity: sha512-61btcOHNnLnsOdtLgA5efqQWjnSi/vow5HbI7HMdKKWqvrKR1bLK3BPlJn9gcSaP2ewuamUSMB5XEy76KUIS2w==}
     engines: {node: '>=10'}
     hasBin: true
+
+  jotai@2.8.4:
+    resolution: {integrity: sha512-f6jwjhBJcDtpeauT2xH01gnqadKEySwwt1qNBLvAXcnojkmb76EdqRt05Ym8IamfHGAQz2qMKAwftnyjeSoHAA==}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      '@types/react': '>=17.0.0'
+      react: '>=17.0.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      react:
+        optional: true
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -861,6 +853,11 @@ packages:
   node-releases@2.0.14:
     resolution: {integrity: sha512-y10wOWt8yZpqXmOgRo77WaHEmhYQYGNA6y421PKsKYWEK8aW+cqAphborZDhqfyKrbZEN92CN1X2KbafY2s7Yw==}
 
+  nodemon@3.1.4:
+    resolution: {integrity: sha512-wjPBbFhtpJwmIeY2yP7QF+UKzPfltVGtfce1g/bB15/8vCGZj8uxD62b/b9M9/WVgme0NZudpownKN+c0plXlQ==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
@@ -895,6 +892,9 @@ packages:
   postcss@8.4.39:
     resolution: {integrity: sha512-0vzE+lAiG7hZl1/9I8yzKLx3aR9Xbof3fBHKunvMfOCYAtMhrsnccJY2iTURb9EZd5+pLuiNV9/c/GZJOHsgIw==}
     engines: {node: ^10 || ^12 || >=14}
+
+  pstree.remy@1.1.8:
+    resolution: {integrity: sha512-77DZwxQmxKnu3aR542U+X8FypNzbfJ+C5XQDk3uWjWxn6151aIMGthWYRXTqT1E5oJvg+ljaa2OJi+VfvCOQ8w==}
 
   queue-lit@1.5.2:
     resolution: {integrity: sha512-tLc36IOPeMAubu8BkW8YDBV+WyIgKlYU7zUNs0J5Vk9skSZ4JfGlPOqplP0aHdfv7HL0B2Pg6nwiq60Qc6M2Hw==}
@@ -933,9 +933,6 @@ packages:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
     engines: {node: '>=8.10.0'}
 
-  redis@4.6.14:
-    resolution: {integrity: sha512-GrNg/e33HtsQwNXL7kJT+iNFPSwE1IPmd7wzV3j4f2z0EYxZfZE7FVTmUysgAtqQQtg5NXF5SNLR9OdO/UHOfw==}
-
   relateurl@0.2.7:
     resolution: {integrity: sha512-G08Dxvm4iDN3MLM0EsP62EDV9IuhXPR6blNz6Utcp7zyV3tr4HVNINt6MpaRWbxoOHT3Q7YN2P+jaHX8vUbgog==}
     engines: {node: '>= 0.10'}
@@ -958,6 +955,15 @@ packages:
   semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
+
+  semver@7.6.2:
+    resolution: {integrity: sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==}
+    engines: {node: '>=10'}
+    hasBin: true
+
+  simple-update-notifier@2.0.0:
+    resolution: {integrity: sha512-a2B9Y0KlNXl9u/vsW6sTIu9vGEpfKu2wRV6l1H3XEas/0gUIzGzBoP/IouTcUQbm9JWZLH3COxyn03TYlFax6w==}
+    engines: {node: '>=10'}
 
   slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
@@ -999,6 +1005,10 @@ packages:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
 
+  touch@3.1.1:
+    resolution: {integrity: sha512-r0eojU4bI8MnHr8c5bNo7lJDdI2qXlWWJk6a9EAFG7vbhTjElYhBVS3/miuE0uOuoLdb8Mc/rVfsmm6eo5o9GA==}
+    hasBin: true
+
   tsc-alias@1.8.10:
     resolution: {integrity: sha512-Ibv4KAWfFkFdKJxnWfVtdOmB0Zi1RJVxcbPGiCDsFpCQSsmpWyuzHG3rQyI5YkobWwxFPEyQfu1hdo4qLG2zPw==}
     hasBin: true
@@ -1023,6 +1033,9 @@ packages:
   uWebSockets.js@https://codeload.github.com/uNetworking/uWebSockets.js/tar.gz/8fa05571bf6ea95be8966ad313d9d39453e381ae:
     resolution: {tarball: https://codeload.github.com/uNetworking/uWebSockets.js/tar.gz/8fa05571bf6ea95be8966ad313d9d39453e381ae}
     version: 20.44.0
+
+  undefsafe@2.0.5:
+    resolution: {integrity: sha512-WxONCrssBM8TSPRqN5EmsjVrsv4A8X12J4ArBiiayv3DyyG3ZlIg6yysuuSYdZsVz3TKcTg2fd//Ujd4CHV1iA==}
 
   undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
@@ -1073,9 +1086,6 @@ packages:
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
-  yallist@4.0.0:
-    resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
-
 snapshots:
 
   '@ampproject/remapping@2.3.0':
@@ -1103,7 +1113,7 @@ snapshots:
       '@babel/traverse': 7.24.7
       '@babel/types': 7.24.7
       convert-source-map: 2.0.0
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@5.5.0)
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -1217,7 +1227,7 @@ snapshots:
       '@babel/helper-split-export-declaration': 7.24.7
       '@babel/parser': 7.24.7
       '@babel/types': 7.24.7
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@5.5.0)
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -1336,32 +1346,6 @@ snapshots:
       mrmime: 2.0.0
       uWebSockets.js: https://codeload.github.com/uNetworking/uWebSockets.js/tar.gz/8fa05571bf6ea95be8966ad313d9d39453e381ae
 
-  '@redis/bloom@1.2.0(@redis/client@1.5.16)':
-    dependencies:
-      '@redis/client': 1.5.16
-
-  '@redis/client@1.5.16':
-    dependencies:
-      cluster-key-slot: 1.1.2
-      generic-pool: 3.9.0
-      yallist: 4.0.0
-
-  '@redis/graph@1.1.1(@redis/client@1.5.16)':
-    dependencies:
-      '@redis/client': 1.5.16
-
-  '@redis/json@1.0.6(@redis/client@1.5.16)':
-    dependencies:
-      '@redis/client': 1.5.16
-
-  '@redis/search@1.1.6(@redis/client@1.5.16)':
-    dependencies:
-      '@redis/client': 1.5.16
-
-  '@redis/time-series@1.0.5(@redis/client@1.5.16)':
-    dependencies:
-      '@redis/client': 1.5.16
-
   '@remix-run/router@1.17.0': {}
 
   '@rollup/plugin-replace@5.0.7(rollup@4.18.0)':
@@ -1431,6 +1415,13 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.18.0':
     optional: true
+
+  '@tanstack/query-core@5.49.1': {}
+
+  '@tanstack/react-query@5.49.2(react@18.3.1)':
+    dependencies:
+      '@tanstack/query-core': 5.49.1
+      react: 18.3.1
 
   '@types/babel__core@7.20.5':
     dependencies:
@@ -1562,8 +1553,6 @@ snapshots:
     dependencies:
       source-map: 0.6.1
 
-  cluster-key-slot@1.1.2: {}
-
   color-convert@1.9.3:
     dependencies:
       color-name: 1.1.3
@@ -1604,9 +1593,11 @@ snapshots:
 
   csstype@3.1.3: {}
 
-  debug@4.3.5:
+  debug@4.3.5(supports-color@5.5.0):
     dependencies:
       ms: 2.1.2
+    optionalDependencies:
+      supports-color: 5.5.0
 
   dir-glob@3.0.1:
     dependencies:
@@ -1708,8 +1699,6 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  generic-pool@3.9.0: {}
-
   gensync@1.0.0-beta.2: {}
 
   glob-parent@5.1.2:
@@ -1745,6 +1734,8 @@ snapshots:
       relateurl: 0.2.7
       terser: 5.31.1
 
+  ignore-by-default@1.0.1: {}
+
   ignore@5.3.1: {}
 
   is-binary-path@2.1.0:
@@ -1765,6 +1756,11 @@ snapshots:
       chalk: 4.1.2
       filelist: 1.0.4
       minimatch: 3.1.2
+
+  jotai@2.8.4(@types/react@18.3.3)(react@18.3.1):
+    optionalDependencies:
+      '@types/react': 18.3.3
+      react: 18.3.1
 
   js-tokens@4.0.0: {}
 
@@ -1831,6 +1827,19 @@ snapshots:
 
   node-releases@2.0.14: {}
 
+  nodemon@3.1.4:
+    dependencies:
+      chokidar: 3.6.0
+      debug: 4.3.5(supports-color@5.5.0)
+      ignore-by-default: 1.0.1
+      minimatch: 3.1.2
+      pstree.remy: 1.1.8
+      semver: 7.6.2
+      simple-update-notifier: 2.0.0
+      supports-color: 5.5.0
+      touch: 3.1.1
+      undefsafe: 2.0.5
+
   normalize-path@3.0.0: {}
 
   nth-check@2.1.1:
@@ -1865,6 +1874,8 @@ snapshots:
       picocolors: 1.0.1
       source-map-js: 1.2.0
 
+  pstree.remy@1.1.8: {}
+
   queue-lit@1.5.2: {}
 
   queue-microtask@1.2.3: {}
@@ -1896,15 +1907,6 @@ snapshots:
   readdirp@3.6.0:
     dependencies:
       picomatch: 2.3.1
-
-  redis@4.6.14:
-    dependencies:
-      '@redis/bloom': 1.2.0(@redis/client@1.5.16)
-      '@redis/client': 1.5.16
-      '@redis/graph': 1.1.1(@redis/client@1.5.16)
-      '@redis/json': 1.0.6(@redis/client@1.5.16)
-      '@redis/search': 1.1.6(@redis/client@1.5.16)
-      '@redis/time-series': 1.0.5(@redis/client@1.5.16)
 
   relateurl@0.2.7: {}
 
@@ -1942,6 +1944,12 @@ snapshots:
 
   semver@6.3.1: {}
 
+  semver@7.6.2: {}
+
+  simple-update-notifier@2.0.0:
+    dependencies:
+      semver: 7.6.2
+
   slash@3.0.0: {}
 
   source-map-js@1.2.0: {}
@@ -1976,6 +1984,8 @@ snapshots:
     dependencies:
       is-number: 7.0.0
 
+  touch@3.1.1: {}
+
   tsc-alias@1.8.10:
     dependencies:
       chokidar: 3.6.0
@@ -2001,6 +2011,8 @@ snapshots:
   typescript@5.5.2: {}
 
   uWebSockets.js@https://codeload.github.com/uNetworking/uWebSockets.js/tar.gz/8fa05571bf6ea95be8966ad313d9d39453e381ae: {}
+
+  undefsafe@2.0.5: {}
 
   undici-types@5.26.5: {}
 
@@ -2039,5 +2051,3 @@ snapshots:
       terser: 5.31.1
 
   yallist@3.1.1: {}
-
-  yallist@4.0.0: {}

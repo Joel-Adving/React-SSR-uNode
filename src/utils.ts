@@ -1,17 +1,31 @@
-import path from 'path'
-import { readdirSync } from 'fs'
-import { fileURLToPath } from 'url'
+import { Request, Response } from '@oki.gg/unode'
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const distDir = path.resolve(__dirname, '..', 'dist')
-const publicDir = path.join(distDir, 'public')
+export function createFetchRequest(req: Request, res: Response) {
+  const origin = `http://${req.getHeader('host')}`
+  const url = new URL(req.getUrl(), origin)
 
-export function getClientScript() {
-  const assetsDir = path.join(publicDir, 'assets')
-  const files = readdirSync(assetsDir)
-  const jsFile = files.find((file) => file.endsWith('.js'))
-  if (!jsFile) {
-    throw new Error('No client script found in assets directory')
+  const controller = new AbortController()
+  res.onAborted(() => {
+    controller.abort()
+  })
+
+  const headers = new Headers()
+  req.forEach((key, value) => {
+    headers.append(key, value)
+  })
+
+  const method = req.getCaseSensitiveMethod()
+
+  const init = {
+    method,
+    headers,
+    signal: controller.signal
   }
-  return `/assets/${jsFile}`
+
+  if (method !== 'GET' && method !== 'HEAD') {
+    // @ts-ignore
+    init.body = req.body()
+  }
+
+  return new Request(url.href, init)
 }

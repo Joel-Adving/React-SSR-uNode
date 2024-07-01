@@ -10,7 +10,7 @@ import { routes } from './routes'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { readFile } from 'fs/promises'
-import { createFetchRequest } from './fetch'
+import { createFetchRequest } from './utils'
 
 const handler = createStaticHandler(routes)
 
@@ -20,9 +20,13 @@ export async function handleRoutes(req: Request, res: Response) {
   const router = createStaticRouter(handler.dataRoutes, context)
   const appHtml = renderToString(<StaticRouterProvider router={router} context={context} />)
   const template = await readFile(
-    path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'public/index.html'),
+    path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'public/static/index.html'),
     'utf8'
   )
-  const html = template.replace('<!--app-html-->', appHtml)
-  res.send(html)
+  if (!res.done) {
+    res.cork(() => {
+      res.writeHeader('Content-Type', 'text/html')
+      res.end(template.replace('<!--app-html-->', appHtml))
+    })
+  }
 }

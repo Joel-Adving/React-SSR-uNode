@@ -3,9 +3,10 @@ import { App, serveStatic } from '@oki.gg/unode'
 import { fileURLToPath } from 'url'
 import { handleRoutes } from './entry.server'
 
+const staticDir = serveStatic(path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'public'))
+
 const app = new App()
-  .get('/static/*', serveStatic(path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'public')))
-  .get('/*', (req, res) => {
-    handleRoutes(req, res)
-  })
+  .get('/*', handleRoutes)
+  .get('/static/*', staticDir)
+  .get('/api/hello-world', () => ({ message: 'Hello, World! From the server!' }))
   .listen(3000)

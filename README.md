@@ -1,6 +1,8 @@
 ## React SSR + Hydration with uNode/uWebsocket.js
 
-This project demonstrates server-side rendering (SSR) with React and hydration on the client-side, using `uNode/uWebsocket.js` and Vite.
+This project demonstrates server-side rendering (SSR) with React and hydration on the client-side, using `uNode/uWebsocket.js`, Vite and react-router
+
+Live demo: [https://react-unode.oki.gg/](https://react-unode.oki.gg/)
 
 ### Features
 

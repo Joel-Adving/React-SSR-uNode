@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom'
-import { queryClient } from '../store'
 import { QueryClientProvider } from '@tanstack/react-query'
+import { queryClient } from '../query'
 
 export default function RootLayout() {
   return (

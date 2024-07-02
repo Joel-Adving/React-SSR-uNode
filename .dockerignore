@@ -1,9 +1,7 @@
 
-node_modules/
-dist/
-.vscode/
-.idea/
+**/node_modules
+**/dist
+**/.git
 .env
 .dockerignore
-.git/
 .gitignore

@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import path from 'path'
 import { App, serveStatic } from '@oki.gg/unode'
 import { fileURLToPath } from 'url'
